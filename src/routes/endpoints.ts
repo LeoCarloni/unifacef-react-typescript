@@ -5,6 +5,8 @@ import Combustivel from "../containers/combustivel";
 import StarWarsDetails from "../containers/star-wars-details";
 import Cache from "../containers/cache";
 import Eleicoes from "../containers/eleicoes";
+import Register from '../containers/register';
+
 
 
 const publicUrl = process.env.PUBLIC_URL;
@@ -21,5 +23,6 @@ export const endpoints: EndPointsProps[] = [
   { path: `${publicUrl}/star-wars/:id`, name: 'Star Wars', component: StarWarsDetails, exact: true },
   { path: `${publicUrl}/cache`, name: 'Cache', component: Cache, exact: true },
   { path: `${publicUrl}/eleicoes`, name: 'Eleições', component: Eleicoes, exact: true },
-  
+  { path: `${publicUrl}/register`, name: 'Register', component: Register, exact: true },
+
 ];

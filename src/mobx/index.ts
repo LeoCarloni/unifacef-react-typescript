@@ -4,6 +4,7 @@ import { router } from './router.store';
 import { starWars } from '../containers/star-wars/store';
 import { starWarsDetails } from '../containers/star-wars-details/store';
 import { cache } from '../containers/cache/store';
+import { register } from '../containers/register/store';
 import { eleicoes } from '../containers/eleicoes/store';
 
 export {
@@ -13,5 +14,6 @@ export {
   starWars,
   starWarsDetails,
   cache,
+  register,
   eleicoes,
 }
