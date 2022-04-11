@@ -22,6 +22,9 @@ export default class StarWars extends React.Component<Props> {
 
    const { films } = this.props.starWars;
 
+    const openDetail = (id: number) => {
+        this.props.router.setHistory(`star-wars/${id}`)
+    }
     return (
       <Container>
         <Grid divided='vertically'>
@@ -39,7 +42,7 @@ export default class StarWars extends React.Component<Props> {
         <Card.Group itemsPerRow={2}>
           {films.map((film, index) => {
             return (
-              <Card key={index}>
+              <Card key={index} onClick={()=> openDetail(film.id) }>
                 <Image src={film.photo} wrapped ui={false} size='small' />
                 <Card.Content>
                   <Card.Meta>{film.title}</Card.Meta>

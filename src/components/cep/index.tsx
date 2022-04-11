@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getZipCode, GetZipCode } from '../../apis/correios.api';
 import { Card, Segment, Loader, Image, Icon } from 'semantic-ui-react';
-//import Swal from 'sweetalert2';
+import Swal from 'sweetalert2';
 
 interface Props {
   zipCode?: number;
@@ -27,8 +27,8 @@ export default function Cep(props: Props) {
       try {
         const response = await getZipCode(zipCode);
         setAddress(response.data);
-      } catch (error) {
-        //Swal.fire(error.message, '', 'warning')
+      } catch (error:any) {
+        Swal.fire(error.message, '', 'warning')
         setAddress(addressBlank);
       }
     }
